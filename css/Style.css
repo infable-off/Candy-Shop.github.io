@@ -307,6 +307,8 @@ h2{
 .grid__btn:hover{
     background-color: #74a342;
 }
+
+
 @media (max-width: 767px){
     .content{
         padding: 95px 0px 0px 0px;
@@ -358,3 +360,63 @@ h2{
 
 
 }
+.content__footer{
+    letter-spacing: 3px;
+    background-color: #FFB7B2;
+    font-size: .94737em;
+}
+.content__footer__grid{
+    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+        'links-name send-friends newsletter .'
+        'links      offer   form    warning'
+;
+}
+
+.content__footer__grid-links-name{grid-area: links-name; padding-top: 15px;}
+.content__footer__grid-send-friends {grid-area:send-friends;padding-top: 15px;}
+.content__footer__grid-newsletter{grid-area:newsletter;padding-top: 15px;}
+.content__footer__grid-links{grid-area:links;}
+.content__footer__grid-offer{grid-area:offer;}
+.content__footer__grid-form{grid-area:form;width: 100%;}
+.content__footer__grid-warning{grid-area:warning;}
+.content__footer__grid-links a{
+    text-decoration: none;
+    color: #3d4246;
+
+}
+.content__footer__grid-links a:hover{
+    border-bottom: 1px solid transparent;
+    border-bottom-color: #3d4246;
+    text-shadow: 0px 0px 4px rgba(118, 127, 159, 0.19);
+}
+.content__footer__grid-warning{
+    border: 1px solid #3d4246;
+    padding: 0.6rem;
+}
+.form{
+    flex-grow: 9999;
+}
+
+@media (max-width: 767px){
+    .content__footer__grid{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'links-name'
+        'links'
+        'send-friends'
+        'offer'
+        'newsletter'
+        'form'
+        'warning'
+
+    ;
+    }
+
+}
+
+
+
