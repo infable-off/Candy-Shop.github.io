@@ -1,0 +1,121 @@
+.content__menu{
+    position: relative;
+    height: fit-content;
+    padding-top: 100px;
+    /*padding-left: 20%;
+    padding-right:20%;*/
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.container__menu-form{
+    border-bottom: 1px solid #e8e9eb;
+    border-top: 1px solid #e8e9eb;
+}
+.container__menu{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'lab1 form1 lab2 form2'
+;
+    gap: 5px;
+    font-size: 15px;
+    /*border-top: 1px solid black;
+    border-bottom: 1px solid black;*/
+
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.content__menu-name{
+    text-align: center;
+}
+#lab1{grid-area: lab1;}
+#lab2{grid-area: lab2;}
+#form1{ grid-area: form1;}
+#form2{grid-area: form2;}
+
+.catalog{
+    display: grid;
+    height: fit-content;
+}
+.product-wrapper {
+    display: block;
+    width: 100%;
+    float: left;
+    transition: width .2s;
+}
+.product {
+    display: block;
+    border: 1px solid #b5e9a7;
+    border-radius: 3px;
+    position: relative;
+    background: #fff;
+    margin: 0 20px 20px 0;
+    text-decoration: none;
+    color: #474747;
+    z-index: 0;
+    height: 300px;
+}
+.products {
+    list-style: none;
+    margin: 0 -20px 0 0;
+    padding: 0;
+}
+
+.product-photo {
+    position: relative;
+    height:200px ;
+    overflow: hidden;
+}
+.product-photo img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    transition: transform .4s ease-out;
+}
+.product:hover .product-photo img {
+    transform: scale(1.05);
+}
+
+
+
+
+@media only screen and (min-width: 450px) {
+    .product-wrapper {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .product-wrapper {
+        width: 33.333%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .product-wrapper {
+        width: 25%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .container__menu{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'lab1'
+        'form1'
+        'lab2'
+        'form2'
+    ;
+    }
+}
