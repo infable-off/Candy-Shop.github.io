@@ -1,0 +1,26 @@
+.login {
+    grid-area: l;
+    background-color: #fdf5e6;
+    text-align: center;
+    height: auto;
+    max-height: 350px;
+    padding: 15%;
+}
+
+.login > p {
+    text-align: justify;
+    font-size: 1.1em;
+    padding: 5% 0 5% 0;
+}
+
+input {
+    width: 100%;
+}
+
+#submit {
+    background-color: #8ebd5b;
+    color: white;
+    font-size: 1rem;
+    padding: 2%;
+    margin: 8% 0 0 0;
+}
