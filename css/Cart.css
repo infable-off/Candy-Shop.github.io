@@ -29,7 +29,19 @@
 .productDetails img{
     overflow: hidden;
 }
-@media (max-width: 375px) {
+@media (max-width: 475px){
+    .productDetails img{
+        display: none;
+    }
+
+}
+@media (min-width: 476px){
+    .productName{
+        padding-top: 19px;
+        padding-right: 10px;
+    }
+}
+@media (max-width: 475px) {
     .productDetails img{
         display: none;
     }
@@ -41,9 +53,8 @@
         padding-right: 10px;
     }
 }
-@media (min-width: 376px){
+@media (min-width: 376px) and (max-width: 475px) {
     .productName{
-
         padding-top: 21px;
     }
 }
